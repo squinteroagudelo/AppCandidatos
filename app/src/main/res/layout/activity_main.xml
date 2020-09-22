@@ -12,31 +12,18 @@
         android:layout_height="100dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.050000012"
+        app:layout_constraintVertical_bias="0.088"
         app:srcCompat="@drawable/ic_urna" />
-
-    <TextView
-        android:id="@+id/tvcantidad"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
-        android:layout_marginEnd="8dp"
-        android:text="Cantidad electores:"
-        android:textColor="@color/colorPrimaryDark"
-        app:layout_constraintEnd_toStartOf="@+id/etcantidad"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintHorizontal_chainStyle="packed"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ivurna" />
 
     <EditText
         android:id="@+id/etcantidad"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="8dp"
         android:ems="10"
         android:inputType="number|textPersonName"
         android:textAlignment="center"
@@ -47,14 +34,14 @@
         app:layout_constraintTop_toBottomOf="@+id/ivurna" />
 
     <TextView
-        android:id="@+id/tvnombre"
+        android:id="@+id/tvcantidad"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="8dp"
-        android:text="Nombre"
+        android:text="Cantidad electores:"
         android:textColor="@color/colorPrimaryDark"
-        app:layout_constraintEnd_toStartOf="@+id/etnombre"
+        app:layout_constraintEnd_toStartOf="@+id/etcantidad"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
@@ -65,13 +52,27 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="84dp"
+        android:layout_marginTop="72dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:textColor="@color/colorPrimaryDark"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/tvnombre"
+        app:layout_constraintTop_toBottomOf="@+id/ivurna" />
+
+    <TextView
+        android:id="@+id/tvnombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="88dp"
+        android:layout_marginEnd="8dp"
+        android:text="Nombre"
+        android:textColor="@color/colorPrimaryDark"
+        app:layout_constraintEnd_toStartOf="@+id/etnombre"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ivurna" />
 
     <EditText

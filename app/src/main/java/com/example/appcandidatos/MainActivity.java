@@ -31,12 +31,12 @@ public class MainActivity extends AppCompatActivity {
 
         Objects.requireNonNull(getSupportActionBar()).setTitle("Registro de votos");
 
-        etcantidad = (EditText) findViewById(R.id.etcantidad);
-        etnombre = (EditText) findViewById(R.id.etnombre);
-        etedad = (EditText) findViewById(R.id.etedad);
-        rdbcandidato1 = (RadioButton) findViewById(R.id.rdbcandidato1);
-        rdbcandidato2 = (RadioButton) findViewById(R.id.rdbcandidato2);
-        rdbcandidato3 = (RadioButton) findViewById(R.id.rdbcandidato3);
+        etcantidad = findViewById(R.id.etcantidad);
+        etnombre = findViewById(R.id.etnombre);
+        etedad = findViewById(R.id.etedad);
+        rdbcandidato1 = findViewById(R.id.rdbcandidato1);
+        rdbcandidato2 = findViewById(R.id.rdbcandidato2);
+        rdbcandidato3 = findViewById(R.id.rdbcandidato3);
 
         rdbcandidato1.setEnabled(false);
         rdbcandidato2.setEnabled(false);
@@ -86,16 +86,19 @@ public class MainActivity extends AppCompatActivity {
             candidato1++;
             turno++;
             toggleEnable();
+            stored();
         }else if(rdbcandidato2.isChecked()){
             electores.add(nombre);
             candidato2++;
             turno++;
             toggleEnable();
+            stored();
         }else if(rdbcandidato3.isChecked()){
             electores.add(nombre);
             candidato3++;
             turno++;
             toggleEnable();
+            stored();
         }else{
             inflateToast(R.layout.toast_failed, R.id.toast_container_failed, "Debe elegir un candidato");
         }
@@ -128,6 +131,12 @@ public class MainActivity extends AppCompatActivity {
         etnombre.requestFocus();
     }
 
+    public void stored(){
+        Toast toast= Toast.makeText(getApplicationContext(),"Su voto ha sido guardado", Toast.LENGTH_LONG);
+        toast.setGravity(Gravity.BOTTOM|Gravity.CENTER_HORIZONTAL, 0, 30);
+        toast.show();
+    }
+
     public void toggleEnable(){
         if (etnombre.isEnabled()){
             etnombre.setEnabled(false);
@@ -154,7 +163,7 @@ public class MainActivity extends AppCompatActivity {
         text.setText(message);
 
         Toast toast = new Toast(getApplicationContext());
-        toast.setGravity(Gravity.TOP|Gravity.CENTER_HORIZONTAL, 0, 100);
+        toast.setGravity(Gravity.TOP|Gravity.CENTER_HORIZONTAL, 0, 150);
         toast.setDuration(Toast.LENGTH_SHORT);
         toast.setView(layout);
         toast.show();
