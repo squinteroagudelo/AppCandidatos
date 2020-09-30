@@ -50,26 +50,31 @@ public class ResultActivity extends AppCompatActivity {
         suma = c1 + c2 + c3;
         tvvotost.setText(String.valueOf(suma));
 
-        if ((c1 == c2 || c1 == c3) && c2 == c3){
+        if ((c1 == c2 || c1 == c3) && c2 == c3) {
             tvganador.setText("Triple empate");
-        }else if (c1 > c2){
-            if (c1 > c3){
+        } else if (c1 > c2) {
+            if (c1 > c3) {
                 tvganador.setText("Candidato 1");
-            }else if(c1 < c3){
+            } else if (c1 < c3) {
                 tvganador.setText("Candidato 3");
-            }else{
+            } else if (c3 > c2) {
                 tvganador.setText("Empate\nCandidato 1 / Candidato 3");
-            }
-        }else if (c1 < c2){
-            if (c2 > c3){
+            } else {
                 tvganador.setText("Candidato 2");
-            }else if (c2 < c3){
-                tvganador.setText("Candidato 3");
-            }else{
-                tvganador.setText("Empate\nCandidato 2 / Candidato 3");
             }
-        }else{
-            tvganador.setText("Empate\nCandidato 1 / Candidato 2");
+        } else if (c1 == c2) {
+            if (c2 > c3){
+                tvganador.setText("Empate\nCandidato 1 / Candidato 2");
+            }else{
+                tvganador.setText("Candidato 3");
+            }
+        } else if (c2 > c3) {
+            tvganador.setText("Candidato 2");
+        } else if (c2 < c3) {
+            tvganador.setText("Candidato 3");
+        } else {
+            tvganador.setText("Empate\nCandidato 2 / Candidato 3");
         }
+
     }
 }

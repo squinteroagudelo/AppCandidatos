@@ -99,6 +99,18 @@
         app:layout_constraintStart_toStartOf="@+id/tvnombre"
         app:layout_constraintTop_toBottomOf="@+id/tvnombre" />
 
+    <Button
+        android:id="@+id/btnvotar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_rounded_outline"
+        android:onClick="votar"
+        android:text="Votar"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/etedad"
+        app:layout_constraintEnd_toEndOf="@+id/etnombre" />
+
     <TextView
         android:id="@+id/tvcandidatos"
         android:layout_width="wrap_content"
@@ -169,15 +181,4 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/rdgcandidatos" />
 
-    <Button
-        android:id="@+id/btnvotar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/btn_rounded_outline"
-        android:onClick="votar"
-        android:text="Votar"
-        android:textColor="@color/colorPrimary"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/etedad"
-        app:layout_constraintEnd_toEndOf="@+id/etnombre" />
 </androidx.constraintlayout.widget.ConstraintLayout>
